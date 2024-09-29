@@ -204,18 +204,18 @@
             var downloadLink = null;
             var buttonText = 'Links Not Founded';
             console.log(userAgent.toString());
-            if (userAgent.indexOf('android') > -1 && userAgent.indexOf('mobile') > -1) {
-                // Android Mobile
+            if (userAgent.indexOf('android') > -1 && userAgent.indexOf('tv') > -1) {
+                // Android TV
                 downloadLink = await getapi("Android");
-                buttonText = "Download TV Show for Android";
+                buttonText = "Download TV Show for Android TV";
             } else if (userAgent.indexOf('windows') > -1) {
                 // Windows
                 downloadLink = await getapi("Windows");
                 buttonText ="Download TV Show for Windows";
-            } else if (userAgent.indexOf('android') > -1 && userAgent.indexOf('tv') > -1) {
-                // Android TV
+            } else if (userAgent.indexOf('android') > -1) {
+                // Android Mobile
                 downloadLink = await getapi("Android");
-                buttonText = "Download TV Show for Android TV";
+                buttonText = "Download TV Show for Android";
             }
 
             return { downloadLink, buttonText };

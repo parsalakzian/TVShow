@@ -208,18 +208,18 @@
             var downloadLink = null;
             var buttonText = 'Links Not Founded';
 
-            if (userAgent.indexOf('android') > -1 && userAgent.indexOf('mobile') > -1) {
-                // Android Mobile
+            if (userAgent.indexOf('android') > -1 && userAgent.indexOf('tv') > -1) {
+                // Android TV
                 downloadLink = await getapi("Android");
-                buttonText = "دانلود تی وی شو برای اندروید";
+                buttonText = "دانلود تی وی شو برای اندروید تی وی";
             } else if (userAgent.indexOf('windows') > -1) {
                 // Windows
                 downloadLink = await getapi("Windows");
                 buttonText ="دانلود تی وی شو برای ویندوز";
-            } else if (userAgent.indexOf('android') > -1 && userAgent.indexOf('tv') > -1) {
-                // Android TV
+            } else if (userAgent.indexOf('android') > -1) {
+                // Android Mobile
                 downloadLink = await getapi("Android");
-                buttonText = "دانلود تی وی شو برای اندروید تی وی";
+                buttonText = "دانلود تی وی شو برای اندروید";
             }
 
             return { downloadLink, buttonText };
