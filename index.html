@@ -203,7 +203,7 @@
             var userAgent = navigator.userAgent.toLowerCase();
             var downloadLink = null;
             var buttonText = 'Links Not Founded';
-
+            console.log(userAgent.toString());
             if (userAgent.indexOf('android') > -1 && userAgent.indexOf('mobile') > -1) {
                 // Android Mobile
                 downloadLink = await getapi("Android");
