@@ -260,7 +260,7 @@
             // Loop through assets to find proper download links
             for (let i in data[0]['assets']) {
                 let link = data[0]['assets'][i]['browser_download_url'];
-                if (link.endsWith('.msix')) {
+                if (link.endsWith('.zip')) {
                     wlink = link;
                 } else if (link.endsWith('.deb')) {
                     llink = link;
